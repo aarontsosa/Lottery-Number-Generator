@@ -32,6 +32,11 @@ function lotto(stop, len){
     return lottoNum
 }
 
+// function amount(element){
+//     var total = element.option[element.selectedIndex]
+//     return total
+// }
+
 function printNum(){
     var top5 = document.querySelector('[data-winner="target"]')
     var bonus = document.querySelector('[data-bonus="target"]')

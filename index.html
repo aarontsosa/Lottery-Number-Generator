@@ -21,22 +21,38 @@
         <div class="row">
              <div class="col-md-1">
             </div> 
-            <div class="col-md-7">
-            <p data-winner="target"> number: </p>
+            <div class="col-md-7" >
+             <p data-winner="target"> number: </p> 
             </div>
-            <div class="col-md-4">
-                <p data-bonus="target">bonus: </p>
+            <div class="col-md-4" >
+                 <p data-bonus="target">bonus: </p> 
             </div>
         </div>
+        <form>
         <div class="row">
-            <div class="col-md-5">
+            <div class="col-md-4">
             </div>
             <div class="col-md-2">
-                <input type="button" value="Generate" onclick="printNum()">
+                 <select name="number" class="form-control"> 
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-2">
+                <input type="button" value="Generate" class="btn btn-default" onclick="printNum()">
+            </div>
+            <div class="col-md-4">
             </div>
         </div>
+        </form>
     </main>
 </body>
 </html>

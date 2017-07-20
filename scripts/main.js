@@ -2,6 +2,8 @@ var winners = {}
 var winNums = []
 var $ham = $('.hamburger')
 var $body = $('.body')
+var $nav = $('.nav')
+var $title = $('[data-lottery="target"]')
 
 function randomNum(stop){
     num = Math.floor((Math.random() * stop) + 1)
@@ -53,7 +55,7 @@ function toArray(nodeList){
     return arr
 }
 
-function printNum(){
+function power(){
     var $total = Number($('select')[0]['value'])
     var $top5 = $('[data-winner="target"]')
     $top5 = toArray($top5)
@@ -65,6 +67,25 @@ function printNum(){
     }
 }
 
+function mega(){
+    var $total = Number($('select')[0]['value'])
+    var $top5 = $('[data-winner="target"]')
+    $top5 = toArray($top5)
+    for (a=0; a < $total; a++) {
+        $top5[a].textContent = lotto(75,5) + " - " + lotto(15,1)
+    }
+    for (b=$total; b < 10; b++){
+        $top5[b].textContent = ""
+    }
+}
+
 $ham.on('click', (event) =>{
     $body.toggleClass('menu')
+})
+
+$nav.on('click', 'p', (event)=>{
+    $target.textContent = $("data-lottery")
+    $('input') ={
+        onClick: $("data-function")
+    }
 })

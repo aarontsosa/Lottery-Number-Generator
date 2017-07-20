@@ -11,7 +11,10 @@
 <body class="container-fluid">
     <div class="nav">
         <div class="navtitle">
-            <p>Number Generator</p>
+            <p data-lottery="PowerBall" data-function="power()">PowerBall</p>
+        </div>
+        <div class="navtitle">
+            <p data-lottery="Mega Millions" data-function="mega()">Mega Millions</p>
         </div>
     </div>
     <div class="body">
@@ -20,7 +23,7 @@
                 <img src="images/Hamburger_icon.png">
             </div>
             <div class="title">
-                <h1> PowerBall </h1>
+                <h1 data-lotery="target"> PowerBall </h1>
             </div>
         </header>
         <main>
@@ -57,7 +60,7 @@
                         <option value="9">9</option>
                         <option value="10">10</option>
                     </select>
-                    <input type="button" value="Generate" class="btn btn-default" onclick="printNum()">
+                    <input type="button" value="Generate" class="btn btn-default" onclick="power()">
                 </div>
             </div>
             </form>

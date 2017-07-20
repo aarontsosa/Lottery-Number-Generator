@@ -3,12 +3,27 @@ html{
 }
 
 header{
+    display: flex;
+    flex-direction: row;
     padding-top: 4%;
-    text-align: center;
-    padding-bottom: 10%;
+    border-bottom: 2px solid black;
 }
-
+.title{
+    width: 70%;
+    text-align: center;
+}
+.hamburger {
+    width: 15%;
+}
+.hamburger img{
+    padding-left: 27%;
+    padding-top: 10%;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
 p{
+    margin-top: 5%;
     font-size: 1.3rem;
     margin-left: 27%;
 }

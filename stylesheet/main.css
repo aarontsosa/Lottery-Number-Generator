@@ -8,8 +8,14 @@ header{
 }
 
 p{
-    font-size: 40px;
+    font-size: 2rem;
 }
 input {
     text-align: center;
+}
+
+@media (screen-max-width: 730px){
+    p{
+        font-size: 1rem;
+    }
 }

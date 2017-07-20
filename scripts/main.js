@@ -8,7 +8,9 @@ function randomNum(stop){
 function checkNum(stop){
     num = randomNum(stop)
     if (num in winners){
-        num = randomNum(stop)
+        while(num in winners){
+            num = randomNum(stop)
+        }
         return num
     } else {
         return num
@@ -32,14 +34,25 @@ function lotto(stop, len){
     return lottoNum
 }
 
-// function amount(element){
-//     var total = element.option[element.selectedIndex]
-//     return total
-// }
-
+function toArray(nodeList){
+    var arr = nodeList;
+    nodeList.forEach((x) => {
+        arr = [ ].slice.call(nodeList)
+    })
+    return arr
+}
 function printNum(){
-    var top5 = document.querySelector('[data-winner="target"]')
-    var bonus = document.querySelector('[data-bonus="target"]')
-    top5.textContent = "number:" + lotto(69,5)
-    bonus.textContent = "bonus:" + lotto(26,1)
+    var total = Number(document.getElementsByTagName('select')["number"]['value'])
+    var top5 = document.querySelectorAll('[data-winner="target"]')
+    var bonus = document.querySelectorAll('[data-bonus="target"]')
+    top5 = toArray(top5)
+    bonus = toArray(bonus)
+    for (a=0; a < total; a++) {
+        top5[a].textContent = "number:" + lotto(69,5)
+        bonus[a].textContent = "bonus:" + lotto(26,1)
+    }
+    for (b=total; b < 10; b++){
+        top5[b].textContent = ""
+        bonus[b].textContent = ""
+    }
 }

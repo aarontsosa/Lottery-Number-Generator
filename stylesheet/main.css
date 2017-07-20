@@ -9,10 +9,20 @@ header{
 }
 
 p{
-    font-size: 2rem;
+    font-size: 1.3rem;
+    margin-left: 27%;
 }
 input {
     text-align: center;
+}
+select.form-control {
+    margin-left: 30%;
+    width: 30%;
+    margin-bottom: 10%;
+}
+input.btn{
+    margin-left: 30%;
+    width: 40%;
 }
 
 @media (screen-max-width: 730px){

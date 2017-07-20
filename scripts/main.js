@@ -49,18 +49,16 @@ function toArray(nodeList){
     })
     return arr
 }
+
 function printNum(){
     var $total = Number($('select')[0]['value'])
     var $top5 = $('[data-winner="target"]')
-    var $bonus = $('[data-bonus="target"]')
     $top5 = toArray($top5)
     $bonus = toArray($bonus)
     for (a=0; a < $total; a++) {
-        $top5[a].textContent = "Numbers:" + lotto(69,5)
-        $bonus[a].textContent = "PowerBall:" + lotto(26,1)
+        $top5[a].textContent = lotto(69,5) + " - " + lotto(26,1)
     }
     for (b=$total; b < 10; b++){
         $top5[b].textContent = ""
-        $bonus[b].textContent = ""
     }
 }

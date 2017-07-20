@@ -1,7 +1,22 @@
 html{
     font-size: 20px;
+    margin: 0;
+    transition-timing-function: linear;
+    transition: 1s;
 }
-
+.container-fluid{
+    padding:0;
+}
+.body{
+    transition-timing-function: linear;
+    transition: .2s;
+    position: relative;
+    background-color: white;
+    height: 200%;
+    margin:0;
+    margin-top: -190%;
+    padding-bottom: 170%;
+}
 header{
     display: flex;
     flex-direction: row;
@@ -22,10 +37,28 @@ header{
     width: 100%;
     height: auto;
 }
+.menu{
+    transition-timing-function: linear;
+    transition: .2s;
+    transform: translate(250px, 0)
+}
+.nav{
+    background-color: black;
+    z-index: -1;
+    opacity: .99;
+    color: white;
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding-bottom: 160%;
+}
 p{
     margin-top: 5%;
     font-size: 1.3rem;
     margin-left: 27%;
+}
+div.col-sm-2{
+    padding: 0;
 }
 input {
     text-align: center;

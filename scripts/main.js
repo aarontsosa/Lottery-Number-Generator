@@ -1,5 +1,8 @@
 var winners = {}
 var winNums = []
+var $ham = $('.hamburger')
+var $body = $('.body')
+
 function randomNum(stop){
     num = Math.floor((Math.random() * stop) + 1)
     return num
@@ -61,3 +64,7 @@ function printNum(){
         $top5[b].textContent = ""
     }
 }
+
+$ham.on('click', (event) =>{
+    $body.toggleClass('menu')
+})

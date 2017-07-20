@@ -1,58 +1,66 @@
 var winners = {}
-
+var winNums = []
 function randomNum(stop){
     num = Math.floor((Math.random() * stop) + 1)
     return num
 }
 
-function checkNum(stop){
-    num = randomNum(stop)
-    if (num in winners){
-        while(num in winners){
-            num = randomNum(stop)
-        }
-        return num
-    } else {
-        return num
-    }
+function shuffler(arrayLength){
+    var arr = arrayLength;
+    var i = arr.length;
+    var j = 0
+    var temp;
+
+   while (i--){
+        j = Math.floor(Math.random()* (i+1));
+        temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+
+   }
+    return arr;
 }
 
-function pickNum(stop,len){
-    for(i=0;i<len;i++){
-        num = checkNum(stop);
-        winners[i] = num
-    }
-    return winners
+function pickNum(stop, len){
+    var winnerlen = 0
+    winners = {}
+        while ( winnerlen < len){
+            winners[randomNum(stop).toString()] = 'dope'
+            winnerlen = Object.keys(winners).length
+        }
+        winNums = Object.keys(winners)
+        winNums = shuffler(winNums)
+        return winNums
 }
 
 function lotto(stop, len){
     var lottoNum = " "
     pickNum(stop,len)
     for(i=0;i<len;i++){
-        lottoNum += winners[i] + " "
+        lottoNum += winNums[i] + " "
     }
     return lottoNum
 }
 
 function toArray(nodeList){
     var arr = nodeList;
-    nodeList.forEach((x) => {
+    nodeList.each((i, x) => {
         arr = [ ].slice.call(nodeList)
     })
     return arr
 }
 function printNum(){
-    var total = Number(document.getElementsByTagName('select')["number"]['value'])
-    var top5 = document.querySelectorAll('[data-winner="target"]')
-    var bonus = document.querySelectorAll('[data-bonus="target"]')
-    top5 = toArray(top5)
-    bonus = toArray(bonus)
-    for (a=0; a < total; a++) {
-        top5[a].textContent = "number:" + lotto(69,5)
-        bonus[a].textContent = "bonus:" + lotto(26,1)
+    var $total = Number($('select')[0]['value'])
+    var $top5 = $('[data-winner="target"]')
+    var $bonus = $('[data-bonus="target"]')
+    $top5 = toArray($top5)
+    $bonus = toArray($bonus)
+    for (a=0; a < $total; a++) {
+        $top5[a].textContent = "Numbers:" + lotto(69,5)
+        $bonus[a].textContent = "PowerBall:" + lotto(26,1)
     }
-    for (b=total; b < 10; b++){
-        top5[b].textContent = ""
-        bonus[b].textContent = ""
+    for (b=$total; b < 10; b++){
+        $top5[b].textContent = ""
+        $bonus[b].textContent = ""
     }
 }

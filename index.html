@@ -18,12 +18,12 @@
         </div>
     </div>
     <div class="body">
-        <header>
+        <header class="power">
             <div class ="hamburger">
                 <img src="images/Hamburger_icon.png">
             </div>
             <div class="title">
-                <h1 data-lotery="target" class="head"> PowerBall </h1>
+                <img src="images/powerball.png">
             </div>
         </header>
         <main>
@@ -61,12 +61,17 @@
                         <option value="10">10</option>
                     </select>
                     <input type="button" value="Generate" class="btn btn-default generate" onclick="power()">
+                    <p class="prev"> Previous Winning Numbers were: </p>
+                    <span></span>
                 </div>
             </div>
             </form>
+        <div>
+        </div>
         </main>
     </div>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="scripts/api.js"></script>
 <script src="scripts/main.js"></script>
 </body>
 </html>

@@ -20,13 +20,15 @@ html{
 .btn{
     transition: 1s;
 }
-h1{
+.title img{
     margin-left: 12%;
+    width: 90%;
 }
 select.form-control{
     margin-left: 16%;
-    width: 18%;
+    width: 30%;
     margin-bottom: -11.5%;
+    position: fixed;
 }
 header{
     display: flex;
@@ -78,6 +80,12 @@ header{
     margin-right: 45%;
     border-radius: .2rem;
 }
+.mega{
+    background-color: #ffeea0;
+}
+.power{
+    background-color: #ed1c24;
+}
 p{
     margin-top: 5%;
     font-size: 1.3rem;
@@ -85,20 +93,31 @@ p{
     letter-spacing: 0.15rem;
     line-height: 1.4rem;
 }
+p.prev{
+    position: absolute;
+    top: 54px;
+    left: 8%;
+}
 div.col-sm-2{
     padding: 0;
 }
 .generate {
     text-align: center;
     color: white;
+    background-color: #dddddd
 }
 .generate{
     z-index: 0;
-    left: 40%;
+    left: 52%;
     position: absolute;
-
 }
-
+span{
+    position: absolute;
+    top: 150px;
+    left: 15%;
+    font-size: 1.3rem;
+    letter-spacing: 0.15rem;
+}
 .selected{
     background-color: #7a7a7a;
     color: white;

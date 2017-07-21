@@ -81,20 +81,40 @@ function mega(){
     }
 }
 
+function hyphenInsert(){
+    var power =  localStorage.getItem("winning_power")
+    power = power.split(" ")
+    power.splice(5, 0, "-")
+    power = power.join(" ")
+    localStorage.setItem('winning_power_hyp', power)
+    return power
+}
+
 $ham.on('click', (event) =>{
     $body.toggleClass('menu')
 })
 
+
+window.onload = function load(){
+    $('span')[0].textContent = hyphenInsert();
+}
+
 function megaPage(){
     $('.generate')[0].attributes[3].value = "mega()";
-    $('.head')[0].textContent = "MegaMillion"
+    $('img')[1].attributes[0].value = "images/megamillion.png"
+    $('span')[0].textContent = localStorage.getItem("winning_mega") + " - " + localStorage.getItem("winning_ball");
+    $('header').addClass('mega')
+    $('header').removeClass('power')
     $('.navbtn').toggleClass('selected')
     $body.toggleClass('menu')
 }
 
 function powerPage(){
     $('.generate')[0].attributes[3].value = "power()";
-    $('.head')[0].textContent = "PowerBall"
+    $('img')[1].attributes[0].value = "images/powerball.png"
+    $('span')[0].textContent = localStorage.getItem("winning_power_hyp");
+    $('header').addClass('power')
+    $('header').removeClass('mega')
     $('.navbtn').toggleClass('selected')
     $body.toggleClass('menu')
 }

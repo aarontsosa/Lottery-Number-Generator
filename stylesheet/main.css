@@ -104,8 +104,52 @@ div.col-sm-2{
     color: white;
 }
 
-@media (screen-max-width: 730px){
-    p{
-        font-size: 1rem;
+@media only screen and (min-width: 730px){
+    @media only screen and (orientation: landscape){
+        p{
+            font-size: 2rem;
+            text-align: center;
+            line-height: .4rem;
+        }
+        select.form-control{
+            margin-left: 267%;
+            width: 65%;
+            margin-bottom: -33.5%;
+        }
+        .generate{
+            left: 337%;
+        }
+        .hamburger img{
+            padding-left: 22%;
+            padding-top: 0%;
+            object-fit: cover;
+            width: 57%;
+            height: auto;
+        }
+        .navbtn{
+            width: 24.5%;
+        }
     }
+    @media only screen and (orientation: portrait){
+        p{
+            margin-left: 33%;
+        }
+        select.form-control{
+            margin-left: 275%;
+            width: 75%;
+            margin-bottom: -46.5%;
+        }
+        .generate{
+            left: 300%;
+        }
+        .hamburger img{
+            width: 76%;
+            padding-left: 25%;
+            padding-top: 0%;
+        }
+        .navbtn{
+            width: 32.5%;
+        }
+    }
+
 }

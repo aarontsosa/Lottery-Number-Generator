@@ -3,7 +3,7 @@ var winNums = []
 var $ham = $('.hamburger')
 var $body = $('.body')
 var $nav = $('.nav')
-var $title = $('[data-lottery="target"]')
+var $title = $('.head')
 
 function randomNum(stop){
     num = Math.floor((Math.random() * stop) + 1)
@@ -83,9 +83,16 @@ $ham.on('click', (event) =>{
     $body.toggleClass('menu')
 })
 
-$nav.on('click', 'p', (event)=>{
-    $target.textContent = $("data-lottery")
-    $('input') ={
-        onClick: $("data-function")
-    }
-})
+function megaPage(){
+    $('.generate')[0].attributes[3].value = "mega()";
+    $('.head')[0].textContent = "MegaMillion"
+    $body.toggleClass('menu')
+}
+
+function powerPage(){
+    $('.generate')[0].attributes[3].value = "power()";
+    $('.head')[0].textContent = "PowerBall"
+    $body.toggleClass('menu')
+}
+
+

@@ -8,8 +8,7 @@ html{
     padding:0;
 }
 .body{
-    transition-timing-function: linear;
-    transition: .2s;
+    transition: all 500ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
     position: relative;
     background-color: white;
     height: 200%;
@@ -17,6 +16,17 @@ html{
     padding-bottom: 170%;
     position: fixed;
     top: 0;
+}
+.btn{
+    transition: 1s;
+}
+h1{
+    margin-left: 12%;
+}
+select.form-control{
+    margin-left: 16%;
+    width: 18%;
+    margin-bottom: -11.5%;
 }
 header{
     display: flex;
@@ -27,6 +37,13 @@ header{
 .title{
     width: 70%;
     text-align: center;
+}
+.navbtn{
+    width: 60.5%;
+    margin-top: 4%;
+    font-size: 1.5rem;
+    background-color: #efefef;
+
 }
 .hamburger {
     width: 15%;
@@ -39,8 +56,7 @@ header{
     height: auto;
 }
 .menu{
-    transition-timing-function: linear;
-    transition: .2s;
+    transition: all 500ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
     transform: translate(250px, 0)
 }
 .nav{
@@ -65,7 +81,9 @@ header{
 p{
     margin-top: 5%;
     font-size: 1.3rem;
-    margin-left: 27%;
+    margin-left: 11%;
+    letter-spacing: 0.15rem;
+    line-height: 1.4rem;
 }
 div.col-sm-2{
     padding: 0;
@@ -74,14 +92,16 @@ div.col-sm-2{
     text-align: center;
     color: white;
 }
-select.form-control {
-    margin-left: 30%;
-    width: 30%;
-    margin-bottom: 10%;
-}
 .generate{
-    margin-left: 30%;
-    width: 40%;
+    z-index: 0;
+    left: 40%;
+    position: absolute;
+
+}
+
+.selected{
+    background-color: #7a7a7a;
+    color: white;
 }
 
 @media (screen-max-width: 730px){

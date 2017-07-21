@@ -1,5 +1,7 @@
 var winners = {}
 var winNums = []
+var alphabet = 'abcdefghijklmnopqrstuvwxyz'
+alphabet = alphabet.split("")
 var $ham = $('.hamburger')
 var $body = $('.body')
 var $nav = $('.nav')
@@ -60,7 +62,7 @@ function power(){
     var $top5 = $('[data-winner="target"]')
     $top5 = toArray($top5)
     for (a=0; a < $total; a++) {
-        $top5[a].textContent = lotto(69,5) + " - " + lotto(26,1)
+        $top5[a].textContent = alphabet[a]+ ". " + lotto(69,5) + " - " + lotto(26,1)
     }
     for (b=$total; b < 10; b++){
         $top5[b].textContent = ""
@@ -72,7 +74,7 @@ function mega(){
     var $top5 = $('[data-winner="target"]')
     $top5 = toArray($top5)
     for (a=0; a < $total; a++) {
-        $top5[a].textContent = lotto(75,5) + " - " + lotto(15,1)
+        $top5[a].textContent = alphabet[a]+ ". " + lotto(75,5) + " - " + lotto(15,1)
     }
     for (b=$total; b < 10; b++){
         $top5[b].textContent = ""
@@ -86,12 +88,14 @@ $ham.on('click', (event) =>{
 function megaPage(){
     $('.generate')[0].attributes[3].value = "mega()";
     $('.head')[0].textContent = "MegaMillion"
+    $('.navbtn').toggleClass('selected')
     $body.toggleClass('menu')
 }
 
 function powerPage(){
     $('.generate')[0].attributes[3].value = "power()";
     $('.head')[0].textContent = "PowerBall"
+    $('.navbtn').toggleClass('selected')
     $body.toggleClass('menu')
 }
 

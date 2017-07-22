@@ -87,38 +87,43 @@ function hyphenInsert(){
     power.splice(5, 0, "-")
     power = power.join(" ")
     localStorage.setItem('winning_power_hyp', power)
-    return power
+    return localStorage.getItem('winning_power_hyp')
 }
 
 $ham.on('click', (event) =>{
     $body.toggleClass('menu')
+    $(".navicon").toggleClass('navactive')
 })
 
-document.onload = 
-function load(){
+$(document).ready(function load(){
     $('span')[0].textContent = hyphenInsert();
-}
+    $('.prev')[0].textContent = "Draw for " + localStorage.getItem("draw-date-power") + ":"
+})  
 
 function megaPage(){
     $('.generate')[0].attributes[3].value = "mega()";
     $('img')[1].attributes[0].value = "images/megamillion.png"
     $('span')[0].textContent = localStorage.getItem("winning_mega") + " - " + localStorage.getItem("winning_ball");
+    $('.prev')[0].textContent = "Draw for " + localStorage.getItem("draw-date-mega") + ":"
     $('header').addClass('mega')
     $('header').removeClass('power')
     $('.navbtn')[1].classList.add('selected')
     $('.navbtn')[0].classList.remove('selected')
     $body.toggleClass('menu')
+    $(".navicon").toggleClass('navactive')
 }
 
 function powerPage(){
     $('.generate')[0].attributes[3].value = "power()";
     $('img')[1].attributes[0].value = "images/powerball.png"
     $('span')[0].textContent = localStorage.getItem("winning_power_hyp");
+    $('.prev')[0].textContent = "Draw for " + localStorage.getItem("draw-date-power") + ":"
     $('header').addClass('power')
     $('header').removeClass('mega')
     $('.navbtn')[0].classList.add('selected')
     $('.navbtn')[1].classList.remove('selected')
     $body.toggleClass('menu')
+    $(".navicon").toggleClass('navactive')
 }
 
 

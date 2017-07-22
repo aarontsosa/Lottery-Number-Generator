@@ -42,9 +42,11 @@ header{
 }
 .navbtn{
     width: 60.5%;
-    margin-top: 4%;
+    margin-top: 1%;
     font-size: 1.5rem;
-    background-color: #efefef;
+    background-color: dimgray;
+    box-shadow: 0px 4px 0px #666666;
+    color: #fffbfb;
 
 }
 .hamburger {
@@ -56,6 +58,7 @@ header{
     object-fit: cover;
     width: 100%;
     height: auto;
+    transition: .1s;
 }
 .menu{
     transition: all 500ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
@@ -64,7 +67,7 @@ header{
 .nav{
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: dimgray;
     z-index: 0;
     opacity: .99;
     color: white;
@@ -82,6 +85,12 @@ header{
 }
 .mega{
     background-color: #ffeea0;
+}
+.power{
+    background-color: #ed1c24
+}
+.btn:focus{
+    box-shadow: 0 0 0 2px rgba(128, 128, 128, 0.25);
 }
 .power{
     background-color: #ed1c24;
@@ -113,14 +122,20 @@ div.col-sm-2{
 }
 span{
     position: absolute;
-    top: 150px;
-    left: 15%;
+    top: 118px;
+    left: 17%;
     font-size: 1.3rem;
     letter-spacing: 0.15rem;
 }
+.hamburger img.navactive{
+    transform: rotate(90deg);
+    padding-top: 0%;
+    padding-left: 22%;
+    padding-right: 9%;
+}
 .selected{
-    background-color: #7a7a7a;
-    color: white;
+    color: rgba(183, 183, 183, 0.49);
+    box-shadow: 0px 4px 0px #6a6a6a;
 }
 
 @media only screen and (min-width: 730px){

@@ -94,8 +94,8 @@ $ham.on('click', (event) =>{
     $body.toggleClass('menu')
 })
 
-
-window.onload = function load(){
+document.onload = 
+function load(){
     $('span')[0].textContent = hyphenInsert();
 }
 
@@ -105,7 +105,8 @@ function megaPage(){
     $('span')[0].textContent = localStorage.getItem("winning_mega") + " - " + localStorage.getItem("winning_ball");
     $('header').addClass('mega')
     $('header').removeClass('power')
-    $('.navbtn').toggleClass('selected')
+    $('.navbtn')[1].classList.add('selected')
+    $('.navbtn')[0].classList.remove('selected')
     $body.toggleClass('menu')
 }
 
@@ -115,7 +116,8 @@ function powerPage(){
     $('span')[0].textContent = localStorage.getItem("winning_power_hyp");
     $('header').addClass('power')
     $('header').removeClass('mega')
-    $('.navbtn').toggleClass('selected')
+    $('.navbtn')[0].classList.add('selected')
+    $('.navbtn')[1].classList.remove('selected')
     $body.toggleClass('menu')
 }
 

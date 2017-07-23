@@ -90,39 +90,52 @@ function hyphenInsert(){
     return localStorage.getItem('winning_power_hyp')
 }
 
-$ham.on('click', (event) =>{
-    $body.toggleClass('menu')
+// $ham.on('click', (event) =>{
+//     $('.nav').toggleClass('menu')
+//     $(".navicon").toggleClass('navactive')
+// })
+$(document).ready(function(){
+  $(".hamburger").click(function(){
+    $(this).toggleClass("is-active");
+    $('.nav').toggleClass('menu')
     $(".navicon").toggleClass('navactive')
-})
+  });
+});
 
 $(document).ready(function load(){
-    $('span')[0].textContent = hyphenInsert();
+    $('span')[3].textContent = hyphenInsert();
     $('.prev')[0].textContent = "Draw for " + localStorage.getItem("draw-date-power") + ":"
 })  
 
 function megaPage(){
     $('.generate')[0].attributes[3].value = "mega()";
-    $('img')[1].attributes[0].value = "images/megamillion.png"
-    $('span')[0].textContent = localStorage.getItem("winning_mega") + " - " + localStorage.getItem("winning_ball");
+    $(".hamburger").toggleClass("is-active");
+    $('img')[0].attributes[0].value = "images/megamillion.png"
+    $('span')[3].textContent = localStorage.getItem("winning_mega") + " - " + localStorage.getItem("winning_ball");
     $('.prev')[0].textContent = "Draw for " + localStorage.getItem("draw-date-mega") + ":"
     $('header').addClass('mega')
     $('header').removeClass('power')
-    $('.navbtn')[1].classList.add('selected')
-    $('.navbtn')[0].classList.remove('selected')
-    $body.toggleClass('menu')
+    $('.navbtn')[1].classList.add('selectedmega')
+    $('.navbtn')[0].classList.remove('selectedpower')
+    $('.nav').addClass('navmega')
+    $('.navbtn')[0].classList.add('buttonmega')
+    $('.nav').toggleClass('menu')
     $(".navicon").toggleClass('navactive')
 }
 
 function powerPage(){
     $('.generate')[0].attributes[3].value = "power()";
-    $('img')[1].attributes[0].value = "images/powerball.png"
-    $('span')[0].textContent = localStorage.getItem("winning_power_hyp");
+    $(".hamburger").toggleClass("is-active");
+    $('img')[0].attributes[0].value = "images/powerball.png"
+    $('span')[3].textContent = localStorage.getItem("winning_power_hyp");
     $('.prev')[0].textContent = "Draw for " + localStorage.getItem("draw-date-power") + ":"
     $('header').addClass('power')
     $('header').removeClass('mega')
-    $('.navbtn')[0].classList.add('selected')
-    $('.navbtn')[1].classList.remove('selected')
-    $body.toggleClass('menu')
+    $('.navbtn')[0].classList.add('selectedpower')
+    $('.navbtn')[1].classList.remove('selectedmega')
+    $('.nav').removeClass('navmega')
+    $('.navbtn')[0].classList.remove('buttonmega')
+    $('.nav').toggleClass('menu')
     $(".navicon").toggleClass('navactive')
 }
 

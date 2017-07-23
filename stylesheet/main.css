@@ -17,7 +17,6 @@ html{
     padding-top: 0;
 }
 .body{
-    transition: all 500ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
     position: relative;
     background-color: #17176d;
     height: 200%;
@@ -42,7 +41,7 @@ select.form-control{
 header{
     display: flex;
     flex-direction: row;
-    padding-top: 4%;
+    padding-top: 3.3%;
     border-bottom: 2px solid black;
     margin-bottom: 10px;
 }
@@ -51,16 +50,19 @@ header{
     text-align: center;
 }
 .navbtn{
-    width: 60.5%;
-    margin-top: 1%;
+    transition: 0s;
+    width: 64%;
+    margin-top: 3%;
     font-size: 1.5rem;
-    background-color: dimgray;
-    box-shadow: 0px 4px 0px #666666;
-    color: #fffbfb;
-
+    background-color: #ea1c25;
+    color: #000000;
+    margin-left: 36%;
+    border: 0;
+    border-radius: 0;
 }
 .hamburger {
-    width: 15%;
+    width: 11%;
+    margin-left: 3%
 }
 .hamburger img{
     padding-left: 27%;
@@ -72,18 +74,20 @@ header{
 }
 .menu{
     transition: all 500ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
-    transform: translate(250px, 0)
+    transform: translate(264px, 0)
 }
 .nav{
+    transition: all 500ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
     display: flex;
     flex-direction: column;
-    background-color: dimgray;
-    z-index: 0;
-    opacity: .99;
+    background-color: #ed1c24;
+    z-index: 1;
+    opacity: 1;
     color: white;
     position: fixed;
-    top: 0;
+    top: 10%;
     width: 100%;
+    right: 414px;
     padding-bottom: 160%;
 }
 .navtitle link{
@@ -97,7 +101,8 @@ header{
     background-color: #e1d28e;
 }
 .power{
-    background-color: #ed1c24
+    background-color: #ed1c24;
+    padding-top: 4.3%
 }
 .btn:focus{
     box-shadow: 0 0 0 2px rgba(128, 128, 128, 0.25);
@@ -130,23 +135,63 @@ div.col-sm-2{
     left: 52%;
     position: absolute;
 }
-span{
+.datenum{
     position: absolute;
     top: 118px;
     left: 18%;
     font-size: 1rem;
     letter-spacing: 0.15rem;
 }
-.hamburger img.navactive{
-    transform: rotate(90deg);
-    padding-top: 0%;
-    padding-left: 22%;
-    padding-right: 9%;
+.selectedpower{
+    color: rgb(244, 244, 244);
+    background-color: #1b82a8
 }
-.selected{
-    color: rgba(183, 183, 183, 0.49);
-    box-shadow: 0px 4px 0px #6a6a6a;
+.navmega{
+    background-color: #e1d28e
 }
+.buttonmega{
+    background-color: #e1d28e
+}
+.selectedmega{
+    color: rgb(244,244,244);
+    background-color: #ea1c25;
+}
+.hamburger .line{
+  width: 50px;
+  height: 5px;
+  background-color: black;
+  display: block;
+  margin: 8px auto;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+#hamburger-3.is-active .line:nth-child(1),
+#hamburger-3.is-active .line:nth-child(3){
+  width: 40px;
+}
+
+#hamburger-3.is-active .line:nth-child(1){
+  -webkit-transform: translateX(-10px) rotate(-45deg);
+  -ms-transform: translateX(-10px) rotate(-45deg);
+  -o-transform: translateX(-10px) rotate(-45deg);
+  transform: translateX(-10px) rotate(-45deg);
+}
+
+#hamburger-3.is-active .line:nth-child(3){
+  -webkit-transform: translateX(-10px) rotate(45deg);
+  -ms-transform: translateX(-10px) rotate(45deg);
+  -o-transform: translateX(-10px) rotate(45deg);
+  transform: translateX(-10px) rotate(45deg);
+}
+#datenum{
+    position: absolute;
+    top: 118px;
+    left: 18%;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+}
+
 
 @media only screen and (min-width: 730px){
     @media only screen and (orientation: landscape){

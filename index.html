@@ -11,7 +11,7 @@
 <body class="container-fluid">
     <div class="nav">
         <div class="navtitle">
-             <input type="button" class="btn btn-default navbtn selected" onclick="powerPage()" value="PowerBall"> 
+             <input type="button" class="btn btn-default navbtn selectedpower" onclick="powerPage()" value="PowerBall"> 
         </div>
         <div class="navtitle">
              <input type="button" class="btn btn-default navbtn" onclick="megaPage()" value="Mega Millions"> 
@@ -19,8 +19,10 @@
     </div>
     <div class="body">
         <header class="power">
-            <div class ="hamburger">
-                <img class="navicon" src="images/Hamburger_icon.png">
+            <div class ="hamburger" id="hamburger-3">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
             </div>
             <div class="title">
                 <img src="images/powerball.png">
@@ -65,7 +67,7 @@
                                 </select>
                                 <input type="button" value="Generate" class="btn btn-default generate" onclick="power()">
                                 <p class="prev"></p>
-                                <span></span>
+                                <span class="datenum" id="datenum"></span>
                             </div>
                         </form>
                         </div>

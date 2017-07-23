@@ -27,47 +27,51 @@
             </div>
         </header>
         <main>
-            <div class="row">
-                <div class="col-xs-3">
-                </div>
-                <div class="col-xs-6 col-s-12 col-lg-12" >
-                    <p data-winner="target"></p> 
-                    <p data-winner="target"></p> 
-                    <p data-winner="target"></p> 
-                    <p data-winner="target"></p> 
-                    <p data-winner="target"></p> 
-                    <p data-winner="target"></p> 
-                    <p data-winner="target"></p> 
-                    <p data-winner="target"></p> 
-                    <p data-winner="target"></p> 
-                    <p data-winner="target"></p> 
-                </div>
-                <div class = "col-xs-3">
+            <div class="container">
+                <div class="card">
+                    <div class="card-block">
+                        <div class="row">
+                            <div class="col-xs-3">
+                            </div>
+                            <div class="col-xs-6 col-s-12 col-lg-12" >
+                                <p data-winner="target"></p> 
+                                <p data-winner="target"></p> 
+                                <p data-winner="target"></p> 
+                                <p data-winner="target"></p> 
+                                <p data-winner="target"></p> 
+                                <p data-winner="target"></p> 
+                                <p data-winner="target"></p> 
+                                <p data-winner="target"></p> 
+                                <p data-winner="target"></p> 
+                                <p data-winner="target"></p> 
+                            </div>
+                            <div class = "col-xs-3">
+                            </div>
+                        </div>
+                        <form>
+                        <div class="row">
+                            <div class="col-xs-2 col-md-2 col-lg-2" >
+                                <select name="number" class="form-control"> 
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option> 
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                                <input type="button" value="Generate" class="btn btn-default generate" onclick="power()">
+                                <p class="prev"></p>
+                                <span></span>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <form>
-            <div class="row">
-                <div class="col-xs-2 col-md-2 col-lg-2" >
-                    <select name="number" class="form-control"> 
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option> 
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
-                    <input type="button" value="Generate" class="btn btn-default generate" onclick="power()">
-                    <p class="prev"></p>
-                    <span></span>
-                </div>
-            </div>
-            </form>
-        <div>
-        </div>
         </main>
     </div>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>

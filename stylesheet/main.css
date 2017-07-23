@@ -7,10 +7,19 @@ html{
 .container-fluid{
     padding:0;
 }
+.card{
+    margin: 0 10px;
+}
+.card-block{
+    padding-bottom: 50%;
+    padding-left: 0%;
+    padding-right: 0;
+    padding-top: 0;
+}
 .body{
     transition: all 500ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
     position: relative;
-    background-color: white;
+    background-color: #17176d;
     height: 200%;
     margin:0;
     padding-bottom: 170%;
@@ -25,16 +34,17 @@ html{
     width: 90%;
 }
 select.form-control{
-    margin-left: 16%;
+    margin-left: 10%;
     width: 30%;
     margin-bottom: -11.5%;
-    position: fixed;
+    position: absolute;
 }
 header{
     display: flex;
     flex-direction: row;
     padding-top: 4%;
     border-bottom: 2px solid black;
+    margin-bottom: 10px;
 }
 .title{
     width: 70%;
@@ -71,7 +81,7 @@ header{
     z-index: 0;
     opacity: .99;
     color: white;
-    position: relative;
+    position: fixed;
     top: 0;
     width: 100%;
     padding-bottom: 160%;
@@ -97,8 +107,8 @@ header{
 }
 p{
     margin-top: 5%;
-    font-size: 1.3rem;
-    margin-left: 8%;
+    font-size: 1rem;
+    margin-left: 13%;
     letter-spacing: 0.15rem;
     line-height: 1.4rem;
 }
@@ -123,8 +133,8 @@ div.col-sm-2{
 span{
     position: absolute;
     top: 118px;
-    left: 13%;
-    font-size: 1.3rem;
+    left: 18%;
+    font-size: 1rem;
     letter-spacing: 0.15rem;
 }
 .hamburger img.navactive{

@@ -18,7 +18,7 @@ html{
 }
 .body{
     position: relative;
-    background-color: #1a4893;
+    background-color: #55bcc9;
     height: 200%;
     margin:0;
     padding-bottom: 170%;
@@ -42,8 +42,8 @@ header{
     display: flex;
     flex-direction: row;
     padding-top: 3.3%;
-    border-bottom: 2px solid black;
     margin-bottom: 10px;
+    padding-bottom: 4%;
 }
 .title{
     width: 70%;
@@ -51,12 +51,12 @@ header{
 }
 .navbtn{
     transition: 0s;
-    width: 64%;
+    width: 67%;
     margin-top: 6.5%;
     font-size: 1.5rem;
-    background-color: #ea1c25;
+    background-color: #55bcc9;
     color: #000000;
-    margin-left: 36%;
+    margin-left: 33%;
     border: 0;
     border-radius: 0;
 }
@@ -80,14 +80,14 @@ header{
     transition: all 500ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
     display: flex;
     flex-direction: column;
-    background-color: #ed1c24;
+    background-color: #55bcc9;
     z-index: 1;
     opacity: 1;
     color: white;
     position: fixed;
-    top: 10%;
+    top: 10.5%;
     width: 100%;
-    right: 414px;
+    right: 397px;
     padding-bottom: 160%;
 }
 .navtitle link{
@@ -98,17 +98,17 @@ header{
     border-radius: .2rem;
 }
 .mega{
-    background-color: #e1d28e;
+    background-color: #55bcc9;
 }
 .power{
-    background-color: #ed1c24;
-    padding-top: 4.3%
+    background-color: #55bcc9;
+    padding-top: 4.4%
 }
 .btn:focus{
     box-shadow: 0 0 0 2px rgba(128, 128, 128, 0.25);
 }
 .power{
-    background-color: #ed1c24;
+    background-color: #55bcc9;
 }
 p{
     margin-top: 5%;
@@ -144,17 +144,17 @@ div.col-sm-2{
 }
 .selectedpower{
     color: rgb(244, 244, 244);
-    background-color: #1a4893;
+    background-color: #fc4445;
 }
 .navmega{
-    background-color: #e1d28e;
+    background-color: #55bcc9;
 }
 .buttonmega{
-    background-color: #e1d28e;
+    background-color: #55bcc9;
 }
 .selectedmega{
     color: rgb(244,244,244);
-    background-color: #1a4893;
+    background-color: #fc4445;
 }
 .hamburger .line{
   width: 50px;
